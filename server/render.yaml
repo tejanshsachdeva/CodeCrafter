@@ -1,0 +1,11 @@
+services:
+  - type: web
+    runtime: node
+    name: codecrafter-server
+    plan: free
+    buildCommand: "npm install && npm run build"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+  
